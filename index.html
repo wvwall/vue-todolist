@@ -26,15 +26,18 @@
     <div id="root">
       <ul class="task">
         <li v-for= "todo in todos">
-            <span>{{todo.title}}</span>
-            <span><i class="fas fa-check-square"></i></span>
-            <span><i class="fas fa-edit"></i></span>
+            <span class= "titolo" :class="(todo.status == 'done') ? 'strike' : '' "  >{{ todo.title }}</span>
+            <span v-if= "todo.status != 'done'" class="check"><i class="fas fa-check-square"></i></span>
+            <span v-if="todo.status != 'done'" class="edit"><i class="fas fa-edit"></i></span>
+            <span v-if="todo.status == 'done'"><i class="fas fa-minus-square"></i></span>
         </li>
-          <input id="inputTitolo" type="text" name="todoTitolo" value="" placeholder="+ Add new ToDo">
+
+          <input v-model="inputTodo" 
+            id="inputTitolo" 
+            placeholder="+ Add new ToDo"
+            @keyup.enter="add">
+
           <!-- <button id="add" type="button" name="button" >ADD</button> -->
-
-          
-
       </ul>
 
    </div> 
