@@ -32,7 +32,7 @@
                 class="check" 
                 @click="check(todo)">
                 <i class="fas fa-check-square" ></i></span>
-            <span v-if="todo.status != 'done'" class="edit"><i class="fas fa-edit"></i></span>
+            <span v-if="todo.status != 'done'" class="edit" @click="edit(todo)"><i class="fas fa-edit"></i></span>
             <span v-if="todo.status == 'done'" @click="remove(todo)"><i class="fas fa-minus-square"></i></span>
         </li>
 
@@ -41,7 +41,7 @@
             placeholder="+ Add new ToDo"
             @keyup.enter="add">
 
-          <!-- <button id="add" type="button" name="button" >ADD</button> -->
+          <button id="add" type="button" name="button" @click= "add" >ADD</button>
       </ul>
 
    </div> 

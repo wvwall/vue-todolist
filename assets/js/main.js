@@ -16,13 +16,17 @@ var app = new Vue({
 
             {
                 title : "Aprire ticket",
-                status : "todo"
+                status : "done"
             },
 
             {
                 title : "Pushare esercizio",
+                status : "done"
+            },
+            {
+                title : "Migliorare edit",
                 status : "todo"
-            }
+            },
         ]
     },
     computed : {
@@ -53,8 +57,15 @@ var app = new Vue({
             this.todos[i].status = "done";
         },
         remove: function(todo) {
-            let i = this.todo.indexOf(todo);
+            let i = this.todos.indexOf(todo);
             this.todos.splice(i, 1);
+        },
+        edit : function (todo) {
+            let i = this.todos.indexOf(todo);
+            this.inputTodo = this.todos[i].title;
+            this.todos.splice(i, 1);
+            
+            
         }
     }
     
