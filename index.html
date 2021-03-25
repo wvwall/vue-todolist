@@ -25,11 +25,15 @@
 
     <div id="root">
       <ul class="task">
-        <li v-for= "todo in todos">
+        <li v-for= "todo in todosComputato">
             <span class= "titolo" :class="(todo.status == 'done') ? 'strike' : '' "  >{{ todo.title }}</span>
-            <span v-if= "todo.status != 'done'" class="check"><i class="fas fa-check-square"></i></span>
+            <span 
+                v-if= "todo.status != 'done'"
+                class="check" 
+                @click="check(todo)">
+                <i class="fas fa-check-square" ></i></span>
             <span v-if="todo.status != 'done'" class="edit"><i class="fas fa-edit"></i></span>
-            <span v-if="todo.status == 'done'"><i class="fas fa-minus-square"></i></span>
+            <span v-if="todo.status == 'done'" @click="remove(todo)"><i class="fas fa-minus-square"></i></span>
         </li>
 
           <input v-model="inputTodo" 
