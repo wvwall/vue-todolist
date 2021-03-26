@@ -63,9 +63,7 @@ var app = new Vue({
         edit : function (todo) {
             let i = this.todos.indexOf(todo);
             this.inputTodo = this.todos[i].title;
-            this.todos.splice(i, 1);
-            
-            
+            this.todos.splice(i, 1);  
         }
     }
     

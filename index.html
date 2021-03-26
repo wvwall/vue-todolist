@@ -17,7 +17,7 @@
     <div class="header">
         <img class="logo" src="./assets/img/logo.png" alt="logo Tobolist">
         <div class="titolo">
-          <h1>wvwalllist</h1>
+          <h1>wvwallList</h1>
         </div>
     </div>
 
@@ -25,6 +25,13 @@
 
     <div id="root">
       <ul class="task">
+        <div class="header_task">
+          <img class="logo_task" src="./assets/img/logo.png" alt="logo Tobolist">
+          <div class="titolo_task">
+            <h2>To Do List</h2>
+          </div>
+      </div>
+  
         <li v-for= "todo in todosComputato">
             <span class= "titolo" :class="(todo.status == 'done') ? 'strike' : '' "  >{{ todo.title }}</span>
             <span 
