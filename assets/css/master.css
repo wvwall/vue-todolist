@@ -47,6 +47,8 @@
     margin-right: 15px;
    }
    .titolo_task {
+       width: 100%;
+     text-align: center;
      font-size: 18px;
    }
   

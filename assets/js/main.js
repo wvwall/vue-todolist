@@ -5,28 +5,25 @@ var app = new Vue({
         inputTodo: "",
         todos: [
             {
-                title : "Iniziare esercizio Boolean",
+                title : "Visitare portfolio",
                 status : "done"
             },
 
             {
-                title : "Avere scompensi emotivi",
-                status : "done"
-            },
-
-            {
-                title : "Aprire ticket",
-                status : "done"
-            },
-
-            {
-                title : "Pushare esercizio",
-                status : "done"
-            },
-            {
-                title : "Migliorare edit",
+                title : "Apprezzare progetti",
                 status : "todo"
             },
+
+            {
+                title : "Proporre colloquio",
+                status : "todo"
+            },
+
+            {
+                title : "Assumere",
+                status : "todo"
+            },
+
         ]
     },
     computed : {
